@@ -1,0 +1,19 @@
+.reposDiv {
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (max-width: 1300px){
+  .reposDiv {
+    justify-content: center
+  }
+}
+
+@media screen and (min-width: 550px) {
+  .reposDiv {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 90%;
+  }
+}

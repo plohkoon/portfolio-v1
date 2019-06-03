@@ -1,0 +1,18 @@
+.repo {
+  width: 90%;
+  margin: 10px;
+  background-color: black;
+  color: white;
+  padding: 10px;
+}
+
+.repo:nth-child(2n+1) {
+  text-align: right;
+}
+
+@media screen and (min-width: 550px) {
+  .repo {
+    min-width: 500px;
+    width: 40%;
+  }
+}
