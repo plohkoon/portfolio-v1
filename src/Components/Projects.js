@@ -17,7 +17,6 @@ function Projects() {
     fetch('https://api.github.com/users/plohkoon/repos')
       .then(res => res.json())
       .then(data => {
-        console.log(data)
         setRepos(data)
       });
   }, []);
