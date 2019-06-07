@@ -4,7 +4,8 @@
   background-color: black;
   color: white;
   padding: 10px;
-  transition: transform 0.5s;
+  --transitionTime: 0.5s;
+  transition: transform var(--transitionTime), box-shadow var(--transitionTime);
   border-radius: 10px;
 }
 
