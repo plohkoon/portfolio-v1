@@ -2,7 +2,7 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-import Projects from './Components/Projects';
+import Projects from './Components/Projects/Projects';
 
 function App() {
   return (

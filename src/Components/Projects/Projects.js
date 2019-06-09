@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import './projects.css';
 
-import RepoCard from './RepoCard/RepoCard.js';
+import RepoCard from '../RepoCard/RepoCard.js';
 
 function Projects() {
   let [repos, setRepos] = useState(null);

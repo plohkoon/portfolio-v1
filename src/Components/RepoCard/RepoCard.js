@@ -8,7 +8,9 @@ function RepoCard(props) {
   const [dim, setDim] = useState();
   //sets the rotation to be applied to div
   const [rot, setRot] = useState({"x": 0, "y": 0});
+  //sets the max for the shadow when the mouse is all the way out
   const shadowMax = 7;
+  //sets a ref to refer to the cardDiv for height and width measurements
   const cardDiv = useRef();
   //handler for mousemove
   const onMouseMove = e => {
@@ -43,7 +45,7 @@ function RepoCard(props) {
       onMouseLeave={onMouseLeave}
       ref={cardDiv}
       style={{
-        transform: `rotate3d(${rot.y}, ${-1*rot.x}, 0, 0.025turn)`,
+        transform: `rotate3d(${-1*rot.y}, ${rot.x}, 0, 0.025turn)`,
         boxShadow: `${rot.x*shadowMax}px ${rot.y*shadowMax}px ${shadowMax}px grey`
       }}
     >
