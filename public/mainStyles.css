@@ -1,0 +1,6 @@
+html {
+  height: 100vh;
+  background: #42f4bf;
+  background: linear-gradient(to bottom,#42f4bf, #41f474);
+  background-attachment: fixed;
+}
