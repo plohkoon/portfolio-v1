@@ -2,10 +2,18 @@ import React, {useState, useEffect} from 'react';
 import './projects.css';
 
 import RepoCard from '../RepoCard/RepoCard.js';
+import ToggleHex from '../ToggleHex/ToggleHex.js';
 
 function Projects() {
   let [repos, setRepos] = useState(null);
   let [ready, setReady] = useState(false);
+  const max = 4;
+
+  let [shortList, setShortList] = useState(true);
+
+  const toggleList = () => {
+    setShortList(!shortList);
+  }
 
   useEffect(() => {
     if(repos) {
@@ -26,16 +34,26 @@ function Projects() {
       });
   }, []);
 
+  const renderCards = () => {
+    let cards = [];
+    for(let i = 0; shortList ? (i < max) : (i < repos.length); i++) {
+      cards.push(<RepoCard data={repos[i]} key={repos[i].id} />);
+    }
+    return cards;
+  }
+
   if(ready && Array.isArray(repos)) {
     return (
       <div className="reposDiv">
         {
-          repos.map(item => {
+          renderCards()
+          /*repos.map((item, index) => {
             return(
               <RepoCard data={item} key={item.id}/>
             )
-          })
+          })*/
         }
+        <ToggleHex toggleList={toggleList} closed={shortList}/>
       </div>
     )
   }
