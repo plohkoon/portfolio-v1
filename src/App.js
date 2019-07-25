@@ -6,11 +6,17 @@ import Projects from './Components/Projects/Projects';
 
 function App() {
   return (
-    <Projects />
+    <div className="App">
+      <Projects />
+    </div>
   )
 
 }
-
+/*
+disabling warning because I like to keep the default react generation but
+the render engine gets annoyed that its unused
+*/
+//eslint-disable-next-line
 const ReactDefault = () => {
   const numb = [1,2,3,4]
   return (
