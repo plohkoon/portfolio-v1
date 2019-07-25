@@ -16,6 +16,11 @@ function Projects() {
   useEffect(() => {
     fetch('https://api.github.com/users/plohkoon/repos')
       .then(res => res.json())
+      .then(data => data.sort((repoA, repoB) => {
+        const dateA = new Date(repoA.pushed_at);
+        const dateB = new Date(repoB.pushed_at);
+        return dateA <= dateB
+      }))
       .then(data => {
         setRepos(data)
       });
