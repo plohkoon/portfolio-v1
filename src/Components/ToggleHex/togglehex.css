@@ -1,0 +1,74 @@
+.plus {
+  width: 100%;
+  height: 100%;
+}
+.plus.opened {
+  transform: rotate(45deg);
+}
+.plus div {
+  background-color: white;
+  position: absolute;
+  right: calc(50% - 15px);
+  width: 30px;
+  height: 200px;
+}
+.plus div:nth-child(2n) {
+  transform: rotate(0deg);
+  transition: transform 1s ease-in-out;
+}
+.plus.active div:nth-child(2n) {
+  transform: rotate(90deg);
+}
+
+.togglehexagon {
+  position: relative;
+  margin: 100px 0px 5px 5px;
+  width: 346px;
+  height: 200px;
+  background-color: black;
+  text-decoration: none;
+  transition: transform 1s ease-in-out;
+}
+.togglehexagon:hover {
+  transform: rotate(180deg);
+}
+.togglehexagon::before,
+.togglehexagon::after {
+  content: "";
+  position: absolute;
+  border-left: 173px solid transparent;
+  border-right: 173px solid transparent;
+}
+.togglehexagon::before {
+  bottom: 100%;
+  border-bottom: 100px solid black;
+}
+.togglehexagon::after {
+  top: 100%;
+  border-top: 100px solid black;
+}
+@media screen and (min-width: 0px) and (max-width: 745px) {
+  .togglehexagon:nth-child(2n) {
+    margin-left: 180px;
+  }
+}
+@media screen and (min-width: 745px) and (max-width: 910px) {
+  .togglehexagon:nth-child(3n) {
+    margin-left: 180px;
+  }
+}
+@media screen and (min-width: 910px) and (max-width: 1095px) {
+  .togglehexagon:nth-child(4n+3) {
+    margin-left: 180px;
+  }
+}
+@media screen and (min-width: 1095px) and (max-width: 1268px) {
+  .togglehexagon:nth-child(5n+4) {
+    margin-left: 180px;
+  }
+}
+@media screen and (min-width: 1268px) {
+  .togglehexagon:nth-child(6n+4) {
+    margin-left: 180px;
+  }
+}
