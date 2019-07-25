@@ -1,21 +1,55 @@
-.repo {
-  width: 90%;
-  margin: 10px;
+.hexagon {
+  position: relative;
+  margin: 100px 0px 5px 5px;
+  width: 346px;
+  height: 200px;
   background-color: black;
-  color: white;
-  padding: 10px;
-  --transitionTime: 0.5s;
-  transition: transform var(--transitionTime), box-shadow var(--transitionTime);
-  border-radius: 10px;
+  text-decoration: none;
 }
-
-.repo:nth-child(2n+1) {
-  text-align: right;
+.hexagon::before,
+.hexagon::after {
+  content: "";
+  position: absolute;
+  border-left: 173px solid transparent;
+  border-right: 173px solid transparent;
 }
-
-@media screen and (min-width: 550px) {
-  .repo {
-    min-width: 500px;
-    width: 40%;
+.hexagon::before {
+  bottom: 100%;
+  border-bottom: 100px solid black;
+}
+.hexagon::after {
+  top: 100%;
+  border-top: 100px solid black;
+}
+@media screen and (min-width: 0px) and (max-width: 745px) {
+  .hexagon:nth-child(2n) {
+    margin-left: 180px;
   }
+}
+@media screen and (min-width: 745px) and (max-width: 910px) {
+  .hexagon:nth-child(3n) {
+    margin-left: 180px;
+  }
+}
+@media screen and (min-width: 910px) and (max-width: 1095px) {
+  .hexagon:nth-child(4n+3) {
+    margin-left: 180px;
+  }
+}
+@media screen and (min-width: 1095px) and (max-width: 1268px) {
+  .hexagon:nth-child(5n+4) {
+    margin-left: 180px;
+  }
+}
+@media screen and (min-width: 1268px) {
+  .hexagon:nth-child(6n+4) {
+    margin-left: 180px;
+  }
+}
+
+p {
+  color: white;
+}
+h1 {
+  color: white;
 }
