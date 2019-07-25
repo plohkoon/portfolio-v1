@@ -1,19 +1,17 @@
 .reposDiv {
   display: flex;
-  flex-direction: column;
+  flex-flow: row wrap;
+  margin: 10px;
 }
 
-@media screen and (max-width: 1300px){
+@media screen and (min-width: 1090px){
   .reposDiv {
-    justify-content: center
+    columns: 2;
   }
 }
 
-@media screen and (min-width: 550px) {
+/*@media screen and (min-width: 550px) {
   .reposDiv {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
     width: 90%;
   }
-}
+}*/
