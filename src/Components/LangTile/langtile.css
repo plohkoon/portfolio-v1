@@ -1,0 +1,29 @@
+.lang {
+  text-decoration: none;
+  color: white;
+  margin: 0px 10px;
+  padding: 3px 0px;
+  background-color: darkgrey;
+  height: 20px;
+  display: flex;
+  flex-flow: row nowrap;
+}
+.lang h6 {
+  margin: auto;
+  color: black;
+  margin: auto 5px;
+}
+.lang img {
+  height: 100%;
+  width: auto;
+  margin: auto 5px;
+}
+.Javascript {
+  border-bottom: orange 3px solid;
+}
+.CSS {
+  border-bottom: blue 3px solid;
+}
+.HTML {
+  border-bottom: red 3px solid;
+}
