@@ -34,24 +34,26 @@ function Projects() {
       });
   }, []);
 
-  const renderCards = () => {
+  /*const renderCards = () => {
     let cards = [];
     for(let i = 0; shortList ? (i < max) : (i < repos.length); i++) {
-      cards.push(<RepoCard data={repos[i]} key={repos[i].id} />);
+      cards.push(
+        <RepoCard data={repos[i]} key={repos[i].id} display={!(shortList && i > max)}/>
+      );
     }
     return cards;
-  }
+  }*/
 
   if(ready && Array.isArray(repos)) {
     return (
       <div className="reposDiv">
         {
-          renderCards()
-          /*repos.map((item, index) => {
+          //renderCards()
+          repos.map((item, index) => {
             return(
-              <RepoCard data={item} key={item.id}/>
+              <RepoCard data={item} key={item.id} display={!(shortList && index > max)} />
             )
-          })*/
+          })
         }
         <ToggleHex toggleList={toggleList} closed={shortList}/>
       </div>

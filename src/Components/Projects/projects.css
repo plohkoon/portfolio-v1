@@ -2,16 +2,6 @@
   display: flex;
   flex-flow: row wrap;
   margin: 10px;
+  width: auto;
 }
 
-@media screen and (min-width: 1090px){
-  .reposDiv {
-    columns: 2;
-  }
-}
-
-/*@media screen and (min-width: 550px) {
-  .reposDiv {
-    width: 90%;
-  }
-}*/
