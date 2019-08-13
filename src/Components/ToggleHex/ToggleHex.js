@@ -5,6 +5,7 @@ import './togglehex.css';
 function ToggleHex(props) {
   const [hovered, setHovered] = useState(false);
   return (
+    //eslint-ignore-next-line
     <a
       className={hovered ? 'hexagon togglehexagon active' : 'hexagon togglehexagon'}
       onClick={props.toggleList}

@@ -14,27 +14,24 @@ function LangTile(props) {
     case 'JavaScript':
       return (
         <div className="Javascript lang">
-          <img src={jslogo} />
+          <img src={jslogo} alt="javascript logo"/>
           <h6>JavaScript</h6>
         </div>
       )
-      break;
     case 'HTML':
       return (
         <div className="HTML lang">
-          <img src={htmllogo} />
+          <img src={htmllogo} alt="html logo"/>
           <h6>HTML</h6>
         </div>
       )
-      break;
     case 'CSS':
       return (
         <div className="CSS lang">
-          <img src={csslogo} />
+          <img src={csslogo} alt="css logo"/>
           <h6>CSS</h6>
         </div>
       )
-      break;
     case 'Dart':
       return (
         <div className="DART lang">
@@ -57,7 +54,6 @@ function LangTile(props) {
         </div>
       )
     default:
-      break;
       return (
         <div className='lang'>
           <h6>{props.lang.toUpperCase()}</h6>

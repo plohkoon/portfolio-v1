@@ -6,7 +6,6 @@ import './repocard.css';
 
 function RepoCard(props) {
   const [lang, setLang] = useState([]);
-  const [hover, setHover] = useState(false);
   useEffect(() => {
     fetch(props.data.languages_url)
       .then(res => res.json())
@@ -18,8 +17,6 @@ function RepoCard(props) {
       <a
         className={props.display ? "hexagon" : "hexisgone"}
         href={props.data.html_url}
-        onMouseEnter={() => setHover(true)}
-        onMouseLeave={() => setHover(false)}
       >
         <h1>{props.data.name.toUpperCase()}</h1>
         <p>{props.data.description}</p>
