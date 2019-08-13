@@ -27,3 +27,12 @@
 .HTML {
   border-bottom: red 3px solid;
 }
+.JAVA {
+  border-bottom: yellow 3px solid;
+}
+.DART {
+  border-bottom: darkblue 3px solid;
+}
+.OBJC {
+  border-bottom: darkolivegreen 3px solid;
+}
